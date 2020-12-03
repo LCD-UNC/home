@@ -98,11 +98,19 @@ function App() {
 
                 <ProjectTab value={value} index={0}>
                     <Grid container spacing={3}>
-                        <RepoCard image="" title="Feature Selection Scripts and Data" description="TODO"
+                        <RepoCard image="" title="Feature Selection Scripts and Data" description='Contains the datasets and 
+                                    scripts needed to obtain the results provided on the paper "Feature Selection for Proximity 
+                                    Estimation in COVID-19 Contact Tracing Appsbased on Bluetooth Low Energy (BLE)" presented in 
+                                    "Pervasive and Mobile Computing" journal in the Special Issue on IoT for Fighting COVID-19'
+
                             zipUrl="https://github.com/LCD-UNC/contactar_feature_selection/archive/master.zip"
                             githubUrl="https://github.com/LCD-UNC/contactar_feature_selection" />
 
-                        <RepoCard image="" title="Laboratory Android App" description="Aplicación Android para recolección de datos de periféricos de comunicación y sensores"
+                        <RepoCard image="" title="Laboratory Android App" description="Android application that can retrieve data 
+                                    from different communication peripherals available on the device, persist them to a local database and 
+                                    perform exporting operations in CSV file format to external storage memory. It is intended to use with 
+                                    debugging and experimental purposes."
+
                             zipUrl="https://github.com/LCD-UNC/contactar_laboratory_android_app/archive/master.zip"
                             githubUrl="https://github.com/LCD-UNC/contactar_laboratory_android_app" />
                     </Grid>
