@@ -8,6 +8,17 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+{/*
+
+    RepoCard Component
+
+    image:          path to static image associated with this repository.
+    title:          repository descriptive title.
+    description:    long repository description.
+    zipUrl:         link to download a branch of this repository.
+    githubUrl:      link reference to the repository.
+
+*/}
 
 class RepoCard extends Component {
 

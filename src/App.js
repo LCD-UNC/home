@@ -72,13 +72,30 @@ function App() {
                 <Tabs value={value} onChange={handleChange} variant="scrollable"
                         scrollButtons="on">
 
+                    {/* Add new tabs here ----------------------------------------------- NEW PROJECTS TABS */}
                     <Tab label="ContactAR" {...a11yProps(0)} />
                 </Tabs>
             </AppBar>
 
             
             <Container maxWidth="xl" className={classes.contentContainer}>
-                
+                {/* ProjectTab with RepositoryCard example
+
+                    <ProjectTab value={value} index={0}>
+                        <Grid container spacing={3}>
+                            <RepoCard image="" title="Example title 1" description="This is a lazy description"
+                                zipUrl=""
+                                githubUrl="" />
+
+                            <RepoCard image="" title="Example title 2" description="This is a lazy description"
+                                zipUrl=""
+                                githubUrl="" />
+
+                        </Grid>
+                    </ProjectTab> */}
+
+                {/* Add new tab content here ----------------------------------------------- NEW PROJECTS TABS */}
+
                 <ProjectTab value={value} index={0}>
                     <Grid container spacing={3}>
                         <RepoCard image="" title="Feature Selection Scripts and Data" description="TODO"

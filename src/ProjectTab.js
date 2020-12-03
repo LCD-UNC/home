@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 
+{/*
+
+    ProjectTab Component
+
+*/}
+
 class ProjectTab extends Component {
     render() {
         const { children, value, index } = this.props;
@@ -12,8 +18,8 @@ class ProjectTab extends Component {
                     id={`scrollable-force-tabpanel-${index}`}
                     aria-labelledby={`scrollable-force-tab-${index}`}>
                 {value === index && (
-                    <Box p={3}>
-                        <Typography>{children}</Typography>
+                    <Box p={2}>
+                        {children}
                     </Box>
                 )}
             </div>
