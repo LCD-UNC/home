@@ -43,7 +43,7 @@ class RepoCard extends Component {
                     </CardActionArea>
                     <CardActions>
                         <Button size="small" target="_blank" href={ zipUrl }>
-                            Descargar ZIP
+                            Download ZIP
                         </Button>
                     </CardActions>
                 </Card>

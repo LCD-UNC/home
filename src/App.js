@@ -4,11 +4,13 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { Container, Tab, Tabs, ThemeProvider } from '@material-ui/core';
-import RepoCard from './RepoCard';
+import { Container, Fab, Tab, Tabs, ThemeProvider, Tooltip } from '@material-ui/core';
+import MailIcon from '@material-ui/icons/Mail';
 import { createMuiTheme } from '@material-ui/core/styles';
 import grey from '@material-ui/core/colors/grey';
+
 import ProjectTab from './ProjectTab';
+import RepoCard from './RepoCard';
 
 const theme = createMuiTheme({
   palette: {
@@ -18,7 +20,7 @@ const theme = createMuiTheme({
     },
     secondary: {
         main: '#D9D166'
-    }
+    },
   },
 });
 
@@ -27,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     mainContainer: {
-        backgroundColor: grey[700],
+        backgroundColor: grey[900],
         height: '100%',
         marginBottom: '0px'
     },
@@ -41,6 +43,17 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
+    },
+    margin: {
+        margin: theme.spacing(1),
+        top: 'auto',
+        right: 20,
+        bottom: 20,
+        left: 'auto',
+        position: 'fixed',
+    },
+    extendedIcon: {
+        marginRight: theme.spacing(1),
     },
 }));
 
@@ -66,7 +79,7 @@ function App() {
             <AppBar position="fixed">
                 <Toolbar variant="regular" className={classes.appBar}>
                     <Typography variant="h6" >
-                        Proyectos del Laboratorio de Comunicaciones Digital - UNC
+                        Digital Communications Laboratory Projects (LCD-UNC)
                     </Typography>
                 </Toolbar>
                 <Tabs value={value} onChange={handleChange} variant="scrollable"
@@ -100,7 +113,7 @@ function App() {
                     <Grid container spacing={3}>
                         <RepoCard image="" title="Feature Selection Scripts and Data" description='Contains the datasets and 
                                     scripts needed to obtain the results provided on the paper "Feature Selection for Proximity 
-                                    Estimation in COVID-19 Contact Tracing Appsbased on Bluetooth Low Energy (BLE)" presented in 
+                                    Estimation in COVID-19 Contact Tracing Apps based on Bluetooth Low Energy (BLE)" presented in 
                                     "Pervasive and Mobile Computing" journal in the Special Issue on IoT for Fighting COVID-19'
 
                             zipUrl="https://github.com/LCD-UNC/contactar_feature_selection/archive/master.zip"
@@ -117,6 +130,13 @@ function App() {
                 </ProjectTab>
                 
             </Container>
+            
+            <Tooltip title="lcd@fcefyn.unc.edu.ar" aria-label="mail" arrow>
+                <Fab variant="extended" color="primary" aria-label="add" className={classes.margin} href="mailto:lcd@fcefyn.unc.edu.ar">
+                    <MailIcon className={classes.extendedIcon} />
+                    Mail us
+                </Fab>
+            </Tooltip>
             </ThemeProvider>
         </div>
     );
