@@ -25,7 +25,7 @@ class RepoCard extends Component {
     render() {
         const {image, title, description, zipUrl, githubUrl} = this.props;
         return (
-            <Grid item xs={12} xl={3}>
+            <Grid item xs={12} xl={3} lg={3} md={6} sm={6}>
                 <Card >
                     <CardActionArea target="_blank" href={ githubUrl }>
                         {image !== "" && (

@@ -1,12 +1,10 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { Container, Fab, Tab, Tabs, ThemeProvider, Tooltip } from '@material-ui/core';
+import { Avatar, Container, Fab, Tab, Tabs, ThemeProvider, Tooltip } from '@material-ui/core';
 import MailIcon from '@material-ui/icons/Mail';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
 import grey from '@material-ui/core/colors/grey';
 
 import ProjectTab from './ProjectTab';
@@ -28,23 +26,13 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
-    mainContainer: {
-        backgroundColor: grey[900],
-        height: '100%',
-        marginBottom: '0px'
-    },
     contentContainer: {
         paddingTop: '120px'
     },
     appBar: {
         textAlign: 'center'
     },
-    paper: {
-        padding: theme.spacing(2),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    },
-    margin: {
+    fabStyle: {
         margin: theme.spacing(1),
         top: 'auto',
         right: 20,
@@ -55,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
     extendedIcon: {
         marginRight: theme.spacing(1),
     },
+
 }));
 
 function a11yProps(index) {
@@ -74,7 +63,7 @@ function App() {
     };
 
     return (
-        <div className={classes.mainContainer}>
+        <div>
             <ThemeProvider theme={ theme }>
             <AppBar position="fixed">
                 <Toolbar variant="regular" className={classes.appBar}>
@@ -89,8 +78,7 @@ function App() {
                     <Tab label="ContactAR" {...a11yProps(0)} />
                 </Tabs>
             </AppBar>
-
-            
+ 
             <Container maxWidth="xl" className={classes.contentContainer}>
                 {/* ProjectTab with RepositoryCard example
 
@@ -109,8 +97,17 @@ function App() {
 
                 {/* Add new tab content here ----------------------------------------------- NEW PROJECTS TABS */}
 
-                <ProjectTab value={value} index={0}>
-                    <Grid container spacing={3}>
+                <ProjectTab value={value} index={0} avatarPath="/static/images/logo_contactar.svg" title="ContactAR" 
+                            description='The general objective of the project is to research and develop an innovative solution for digital
+                                         contact tracing within the context of COVID-19. This solution is based on the use of communication 
+                                         technologies (GPS, cellular telephony: 2G/3G/4G, WiFi, Bluetooth) currently available in mobile 
+                                         devices (cell phones). These devices have the ability to record the presence of digital signals emitted 
+                                         by these technologies in a unique way, and thus estimate the proximity between the devices, and 
+                                         consequently, between the people who use them. This solution seeks to determine quickly, objectively, 
+                                         reliably, on a large scale (communities, populations, regions, countries, etc.) and at low cost the contacts 
+                                         between people diagnosed with COVID-19 (confirmed cases) and people who, through direct or indirect contact 
+                                         or by sharing common places, may have contracted COVID-19 but are asymptomatic or do not yet present symptoms.' >
+
                         <RepoCard image="" title="Feature Selection Scripts and Data" description='Contains the datasets and 
                                     scripts needed to obtain the results provided on the paper "Feature Selection for Proximity 
                                     Estimation in COVID-19 Contact Tracing Apps based on Bluetooth Low Energy (BLE)" presented in 
@@ -126,13 +123,12 @@ function App() {
 
                             zipUrl="https://github.com/LCD-UNC/contactar_laboratory_android_app/archive/master.zip"
                             githubUrl="https://github.com/LCD-UNC/contactar_laboratory_android_app" />
-                    </Grid>
                 </ProjectTab>
                 
             </Container>
             
             <Tooltip title="lcd@fcefyn.unc.edu.ar" aria-label="mail" arrow>
-                <Fab variant="extended" color="primary" aria-label="add" className={classes.margin} href="mailto:lcd@fcefyn.unc.edu.ar">
+                <Fab variant="extended" color="primary" aria-label="add" className={classes.fabStyle} href="mailto:lcd@fcefyn.unc.edu.ar">
                     <MailIcon className={classes.extendedIcon} />
                     Mail us
                 </Fab>
