@@ -106,7 +106,9 @@ function App() {
                                          consequently, between the people who use them. This solution seeks to determine quickly, objectively, 
                                          reliably, on a large scale (communities, populations, regions, countries, etc.) and at low cost the contacts 
                                          between people diagnosed with COVID-19 (confirmed cases) and people who, through direct or indirect contact 
-                                         or by sharing common places, may have contracted COVID-19 but are asymptomatic or do not yet present symptoms.' >
+                                         or by sharing common places, may have contracted COVID-19 but are asymptomatic or do not yet present symptoms.
+                                         This project was presented by the Digital Communications Laboratory but different laboratories and research groups
+                                         from the National University of Córdoba participate actively working.' >
 
                         <RepoCard image="" title="Feature Selection Scripts and Data" description='Contains the datasets and 
                                     scripts needed to obtain the results provided on the paper "Feature Selection for Proximity 
