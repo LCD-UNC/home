@@ -12,6 +12,11 @@ html, body, #root, #root>div {
   background-color: #212121;
 }
 
+.show-more-less a:visited, .show-more-less a:link {
+  text-decoration: none !important;
+  color: #BF2633;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

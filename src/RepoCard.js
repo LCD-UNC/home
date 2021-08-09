@@ -7,8 +7,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import ShowMoreText from "react-show-more-text";
 
-{/*
+/*
 
     RepoCard Component
 
@@ -18,7 +19,7 @@ import Typography from '@material-ui/core/Typography';
     zipUrl:         link to download a branch of this repository.
     githubUrl:      link reference to the repository.
 
-*/}
+*/
 
 class RepoCard extends Component {
 
@@ -29,15 +30,18 @@ class RepoCard extends Component {
                 <Card >
                     <CardActionArea target="_blank" href={ githubUrl }>
                         {image !== "" && (
-                        <CardMedia component="img" alt={ title } height="140"
+                        <CardMedia component="img" alt={ title } height="300"
                                     image={ image }
                                     title={ title } />)}
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="h2">
+                            <Typography gutterBottom variant="h6" component="h2">
                                 { title }
                             </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">
-                                { description }
+                                <ShowMoreText lines={2} more="Show more" less="Show less" className="show-more-less"
+                                                truncatedEndingComponent={" ... "} >
+                                    { description }
+                                </ShowMoreText>
                             </Typography>
                         </CardContent>
                     </CardActionArea>

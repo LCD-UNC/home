@@ -2,15 +2,14 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { Avatar, Container, Fab, Tab, Tabs, ThemeProvider, Tooltip } from '@material-ui/core';
+import { Container, Fab, Tab, Tabs, ThemeProvider, Tooltip } from '@material-ui/core';
 import MailIcon from '@material-ui/icons/Mail';
-import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
-import grey from '@material-ui/core/colors/grey';
+import { createTheme, makeStyles } from '@material-ui/core/styles';
 
 import ProjectTab from './ProjectTab';
 import RepoCard from './RepoCard';
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     type: "dark",
     primary: {
@@ -118,13 +117,31 @@ function App() {
                             zipUrl="https://github.com/LCD-UNC/contactar_feature_selection/archive/master.zip"
                             githubUrl="https://github.com/LCD-UNC/contactar_feature_selection" />
 
-                        <RepoCard image="" title="Laboratory Android App" description="Android application that can retrieve data 
+                        <RepoCard image="/static/images/logo_contactar_lab.svg" title="Laboratory Android App" description="Android application that can retrieve data 
                                     from different communication peripherals available on the device, persist them to a local database and 
                                     perform exporting operations in CSV file format to external storage memory. It is intended to use with 
                                     debugging and experimental purposes."
 
                             zipUrl="https://github.com/LCD-UNC/contactar_laboratory_android_app/archive/master.zip"
                             githubUrl="https://github.com/LCD-UNC/contactar_laboratory_android_app" />
+
+                        <RepoCard image="/static/images/logo_contactar_seria.png" title="SERIA: Contact Tracing and Prevention Simulator for COVID-19" 
+                                    description="A plethora of measures are being combined in the attempt to reduce SARS‑CoV‑2 spread. Due to its sustainability, 
+                                    contact tracing is one of the most frequently applied interventions worldwide, albeit with mixed results. We evaluate the 
+                                    performance of digital contact tracing for different infection detection rates and response time delays. We also introduce 
+                                    and analyze a novel strategy we call contact prevention, which emits high exposure warnings to smartphone users according to 
+                                    Bluetooth‑based contact counting. We model the effect of both strategies on transmission dynamics in SERIA, an agent‑based 
+                                    simulation platform that implements population‑dependent statistical distributions. Results show that contact prevention 
+                                    remains effective in scenarios with high diagnostic/response time delays and low infection detection rates, which greatly 
+                                    impair the effect of traditional contact tracing strategies. Contact prevention could play a significant role in pandemic 
+                                    mitigation, especially in developing countries where diagnostic and tracing capabilities are inadequate. Contact prevention 
+                                    could thus sustainably reduce the propagation of respiratory viruses while relying on available technology, respecting data privacy, 
+                                    and most importantly, promoting community‑based awareness and social responsibility. Depending on infection detection and app 
+                                    adoption rates, applying a combination of digital contact tracing and contact prevention could reduce pandemic‑related 
+                                    mortality by 20–56%."
+
+                            zipUrl="https://github.com/LCD-UNC/contactar_seria_simulator/archive/main.zip"
+                            githubUrl="https://github.com/LCD-UNC/contactar_seria_simulator" />
                 </ProjectTab>
                 
             </Container>
